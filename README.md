@@ -14,9 +14,13 @@ Bu proje, sipariş yönetimi ve indirim hesaplamalarını içeren bir RESTful AP
 ## 🚀 Özellikler
 
 ✔ Sipariş ekleme, silme ve listeleme API'leri
+
 ✔ Sipariş eklerken stok kontrolü
+
 ✔ Belirli kurallara göre dinamik indirim hesaplama sistemi
+
 ✔ Docker ile kolay kurulum
+
 ✔ Gelecekte genişletilebilir yapı
 
 ## ⚡ Kurulum
@@ -49,27 +53,45 @@ Uygulama varsayılan olarak http://127.0.0.1:8000 adresinde çalışacaktır.
 
 ## 📡 API Kullanımı
 
-🔹 Sipariş Ekleme
-
-POST `/api/orders`
+<table>
+    <thead>
+        <tr>
+            <td>TASK</td>
+            <td>METHOD</td>
+            <td>URL</td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Sipariş Listesi</td>
+            <td>GET</td>
+            <td>/api/orders</td>
+        </tr>
+        <tr>
+            <td>Sipariş Silme</td>
+            <td>DELETE</td>
+            <td>/api/orders/{id}</td>
+        </tr>
+        <tr>
+            <td>Sipariş Oluşturma</td>
+            <td>POST</td>
+            <td>/api/orders</td>
+        </tr>
+    </tbody>
+</table>
 
 ```
+## EXAMPLE POST JSON BODY ##
 {
   "customer_id": 1,
-  "products": [
+  "items": [
     { "product_id": 3, "quantity": 2 },
     { "product_id": 5, "quantity": 1 }
   ]
 }
 ```
 
-🔹 Sipariş Silme
-
-DELETE `/api/orders/{id}`
-
-🔹 Sipariş Listeleme
-
-GET `/api/orders
+[Örnek Postman Collection](https://documenter.getpostman.com/view/15294633/2sAYXEFdvd) 
 
 ## 🔧 Mimari ve Kullanılan Teknolojiler
 
