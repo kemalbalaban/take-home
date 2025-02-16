@@ -31,8 +31,8 @@ fi
 # Storage link oluştur
 php artisan storage:link
 
-# Migrations çalıştır (veritabanına bağlantı varsa)
-php artisan migrate --force
+# Migrations ve seedleri çalıştır (veritabanına bağlantı varsa)
+php artisan migrate:fresh --seed --force
 
 # Storage ve cache izinlerini ayarla
 chmod -R 777 storage bootstrap/cache
