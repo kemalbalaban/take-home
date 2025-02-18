@@ -77,11 +77,21 @@ Uygulama varsayılan olarak http://127.0.0.1:8000 adresinde çalışacaktır.
             <td>POST</td>
             <td>/api/orders</td>
         </tr>
+        <tr>
+            <td>İndirim Roller Listesi</td>
+            <td>GET</td>
+            <td>/api/discounts/rules</td>
+        </tr>
+        <tr>
+            <td>İndirim Tanımlama</td>
+            <td>POST</td>
+            <td>/api/discounts/{order_id}</td>
+        </tr>
     </tbody>
 </table>
 
 ```
-## EXAMPLE POST JSON BODY ##
+## CREATE ORDER EXAMPLE POST JSON BODY ##
 {
   "customer_id": 1,
   "items": [
@@ -91,7 +101,7 @@ Uygulama varsayılan olarak http://127.0.0.1:8000 adresinde çalışacaktır.
 }
 ```
 
-[Örnek Postman Collection](https://documenter.getpostman.com/view/15294633/2sAYXEFdvd) 
+[Postman İçe Aktar Dosyası](./Orders.postman_collection.json)
 
 ## 🔧 Mimari ve Kullanılan Teknolojiler
 
@@ -104,3 +114,5 @@ Uygulama varsayılan olarak http://127.0.0.1:8000 adresinde çalışacaktır.
 ## 📩 İletişim
 Bu repo hakkında geri bildirimleriniz veya sorularınız için benimle iletişime geçebilirsiniz:
 
+
+kemalbalaban@gmail.com
