@@ -6,7 +6,7 @@ use App\Models\Customer;
 use App\Models\Order;
 use App\Models\OrderItem;
 use App\Models\Product;
-use App\Models\User;
+use App\Models\DiscountRule;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use Carbon\Carbon;
@@ -83,6 +83,28 @@ class TakeHomeSeeder extends Seeder
             'quantity' => 10,
             'unit_price' => 120.75,
             'total' => 1207.50
+        ]);
+
+        DiscountRule::create([
+            'name' => '1000 TL ve Üzeri %10 İndirim',
+            'type' => 'percentage',
+            'value' => 10,
+            'min_order_total' => 1000
+        ]);
+
+        DiscountRule::create([
+            'name' => 'Kategori 2: 6 Adet Alana 1 Bedava',
+            'type' => 'free_item',
+            'category_id' => 2,
+            'min_quantity' => 6
+        ]);
+
+        DiscountRule::create([
+            'name' => 'Kategori 1: En Ucuz Ürüne %20 İndirim',
+            'type' => 'percentage',
+            'value' => 20,
+            'category_id' => 1,
+            'min_quantity' => 2
         ]);
     }
 

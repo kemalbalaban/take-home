@@ -15,6 +15,11 @@ return new class extends Migration
             $table->id();
             $table->integer('customer_id');
             $table->decimal('total', 10, 2)->default(0.00);
+
+            $table->decimal('total_price', 10, 2)->default(0.00);
+            $table->decimal('discount_applied', 10, 2)->default(0);
+            $table->decimal('final_price', 10, 2)->default(0.00);
+
             $table->timestamps();
         });
 
@@ -25,6 +30,7 @@ return new class extends Migration
             $table->integer('quantity');
             $table->decimal('unit_price', 10, 2)->default(0.00);
             $table->decimal('total', 10, 2)->default(0.00);
+
             $table->timestamps();
         });
     }
